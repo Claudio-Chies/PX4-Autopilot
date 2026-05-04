@@ -10,3 +10,6 @@ fi
 
 # DShot telemetry is always on UART7
 dshot telemetry -d /dev/ttyS5
+
+# Paraglider variometer
+para_vario start

@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# Auterion Skynode fmu-v6x specific board extras init
+#------------------------------------------------------------------------------
+
+# Paraglider variometer
+para_vario start

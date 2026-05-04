@@ -1,0 +1,5 @@
+menuconfig MODULES_PARA_VARIO
+	bool "para_vario"
+	default n
+	---help---
+		Enable support for paraglider variometer module

@@ -1,0 +1,70 @@
+module_name: para_vario
+parameters:
+- group: Paraglider Variometer
+  definitions:
+    PV_ENABLE:
+      description:
+        short: Enable paraglider variometer module
+      type: boolean
+      default: 1
+    PV_USE_TEK:
+      description:
+        short: Use total-energy compensation when airspeed is available
+        long: |-
+          When 1 and airspeed_validated is publishing valid data, the
+          vario reading uses TEK = -vz + V*dV/dt / g. Otherwise falls
+          back to uncompensated -vz.
+      type: boolean
+      default: 1
+    PV_SINK_THR:
+      description:
+        short: Sink alarm threshold (negative climb rate)
+      type: float
+      default: -1.5
+      unit: m/s
+      min: -10.0
+      max: 0.0
+    PV_CLIMB_THR:
+      description:
+        short: Climb beep onset threshold
+      type: float
+      default: 0.2
+      unit: m/s
+      min: 0.0
+      max: 5.0
+    PV_TONE_BASE:
+      description:
+        short: Buzzer base frequency at zero climb
+      type: int32
+      default: 600
+      unit: Hz
+      min: 100
+      max: 5000
+    PV_TONE_GAIN:
+      description:
+        short: Buzzer pitch slope per m/s of climb
+      type: int32
+      default: 200
+      unit: Hz
+      min: 0
+      max: 2000
+    PV_VOLUME:
+      description:
+        short: Buzzer volume (0-100)
+      type: int32
+      default: 60
+      min: 0
+      max: 100
+    PV_IGC_ENABLE:
+      description:
+        short: Write IGC track log to SD card while armed
+      type: boolean
+      default: 1
+    PV_RATE_HZ:
+      description:
+        short: Vario update rate
+      type: int32
+      default: 50
+      unit: Hz
+      min: 10
+      max: 200

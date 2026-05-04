@@ -1,0 +1,7 @@
+#!/bin/sh
+#
+# fmu-v5 specific board extras init
+#------------------------------------------------------------------------------
+
+# Paraglider variometer
+para_vario start
